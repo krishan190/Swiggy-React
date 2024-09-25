@@ -1,0 +1,129 @@
+* We keep a representation of dom with us that is known as Virtual DOM.
+
+* React does something known as Reconciliation: it is a algorithm that (diff algorithm) react uses to diff one tree from other.
+
+* that diff algorithm to find difference between trees and it founds out what needs to be updated just 
+update the small portion of it.It does not re-render whole app
+
+* React uses this diff algorithm this process is known as Reconciliation
+
+// React why not use to index as a key
+
+
+
+// ***************** lecture 6 *********************//
+
+import { Title } from "./components/Title"; //Name import  export const header
+import Title  from "./components/Title"; //Default import  export default header
+
+* whenever in any compoents contain a lot of components inside a compoents in that case 
+we put it inside app.js 
+
+   import * as xyz "./src/components/Title.js
+
+// What is state?
+// what is React hooks? functions
+// what is usestate?
+
+NOTE======>
+
+=>react says that never create the compoent inside the compoent 
+=>React gives you hook useState to create local state variable inside your functional compoent.
+=>useState should not be called inside if else and loop.
+
+const [searchInput,setSearchInput] = useState("")  // returns = [variableName, function to update the variable] 
+
+
+
+
+
+// *********************letcutre 8 (Exploring world)**************************//
+
+monolothic architecture
+microservice architecture
+
+====🌟🌟🌟🌟🌟🌟🌟🌟🌟====
+
+one of the important hook that is useEffect which react is gives us (useEffect is called after component is rendered.) 
+
+=>if the dependency array is empty array only once after the initial render. 
+=>if we dont pass anything useEffect will called after every re-render.
+
+
+
+sequence of calling is => 1 compoent will rendered
+                          2 useEffect will called
+                          3 if anything will changed it will re-render again
+
+(    app load the website----API call------render page
+
+     app load the website----render page----API call-----update  the UI   )
+
+=======>when will my compoent re-render?
+       two time
+       =>either state changes
+       =>props changes
+
+=======>empty dependency array=>once after render
+        dep arr[searchText] = once after initial render + everytime after re-render my searchtext changes
+
+
+what we are rendering? allRestaurants or filteredRestaurants
+
+const [allRestaurants, setAllRestaurants] = useState([]);
+const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+ 
+ANS: filteredRestaurants we are rendering in render function
+
+allRestaurants is used for to search to filter.
+
+
+// *****************************lecture 09 (finding Path)*******************
+
+
+=>createBrowseRouter
+
+
+//SPA (Single Page Application) 🌟🌟🌟
+
+
+2 types of routing 
+
+==>client side routing : we dont want to load anything from the server
+==>Server side routing
+
+
+know about ➡️ createBrowseRouter ,RouterProvider
+
+==>all children will go into the outlet according to the route
+==>outlet (all children will go into the outlet it refers the children component)
+
+
+
+//*******************************lecture 11 (optimizing our app)******************************
+
+Q.1 code splitting?
+Q.2 Lazy load things up?
+Q-3 How we make large scale Application?
+Q-4 which is performant?
+Q-5 Which is fast?
+Q-6 How to create custom hooks?
+
+in Every question WHEN, HOW , WHY?
+
+
+Readable
+Reusable
+Maintainable (it means that easy to debug)
+testable
+
+
+//Hook is a javaScript code it extract some logic
+
+
+// chunking
+// code splitting
+// Dynamic Bundling
+// lazy loading
+// ondemand loading
+// Dynamic import
