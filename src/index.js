@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./components/About";
+
 import reportWebVitals from "./reportWebVitals";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
@@ -14,6 +14,8 @@ import Shimmer from "./components/Shimmer";
 
 const Instamart = lazy(() => import("./components/Instamart.js"));
 //upon ondemand loading => upon render =>suspend loading
+
+const About = lazy(() => import("./components/About.js"));
 
 const appRouter = createBrowserRouter([
   {
@@ -27,7 +29,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Loading ......</h1>}>
+            <About />
+          </Suspense>
+        ),
         children: [
           {
             path: "profile",

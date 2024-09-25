@@ -1,4 +1,3 @@
-import Profile from "./ProfileClass";
 import ProfileFunctionalCmp from "./Profile";
 import { Component } from "react";
 

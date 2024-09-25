@@ -32,8 +32,6 @@ const Body = () => {
     );
   }
 
-  // not render component(Early return)
-
   const isOnline = useOnline();
 
   if (!isOnline) {
@@ -46,10 +44,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="search-container">
+      <div className="search-container p-5 bg-orange-100 my-2 shadow-lg">
         <input
           type="text"
-          className="search-input"
+          className="border-black"
           placeholder="Search"
           value={searchText}
           onChange={(e) => {
@@ -59,7 +57,7 @@ const Body = () => {
         />
 
         <button
-          className="search-btn"
+          className="m-1 p-1 bg-purple-900 text-white rounded-md hover:bg-pink-500"
           onClick={() => {
             // need to filter the data
             const data = filterData(searchText, allRestaurants);
@@ -70,7 +68,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap bg-cyan-100">
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link

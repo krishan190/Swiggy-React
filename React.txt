@@ -127,3 +127,21 @@ testable
 // lazy loading
 // ondemand loading
 // Dynamic import
+
+
+// ***************Jo dikhta hai vo bikta hai*********************
+
+// Normal native css
+// SCSS
+// inline css
+// Component libraries- Material UI ,Base UI, Ant, chakra
+// styled compoent
+
+
+
+// Tailwind css framework
+                      ==>CSS on the go (in the same file)
+                      ==> Reusability
+                      ==> less Bundle size
+                      ==> flexible UI (customization)
+                      ==> 
