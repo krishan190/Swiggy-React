@@ -129,7 +129,7 @@ testable
 // Dynamic import
 
 
-// ***************Jo dikhta hai vo bikta hai*********************
+// *************** lecture 12 (Jo dikhta hai vo bikta hai) *********************
 
 // Normal native css
 // SCSS
@@ -145,3 +145,14 @@ testable
                       ==> less Bundle size
                       ==> flexible UI (customization)
                       ==> 
+
+
+
+// *********************** lecture 13 (Data is the new oil)********************
+
+// ==> Props drilling
+// ==> lifting the state up
+// ==> built our own accordian
+// ==> how to crate context
+// ==> how do we update the context
+// ==> React dev tool (profiler)

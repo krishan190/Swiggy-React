@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState({
+    name: "krishan",
+    email: "support@kkDev.com",
+  });
   return (
     <>
       <Header />
-      {/* outlet (all children will go into the outlet it refers the children component*/}
       <Outlet />
       <Footer />
     </>
