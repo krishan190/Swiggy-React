@@ -7,6 +7,7 @@ export const FETCH_MENU_URL =
 export const FETCH_LIST_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0751377&lng=72.9091436&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 // default driven UI
+
 export const RestaurantList = [
   {
     info: {
