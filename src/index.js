@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import reportWebVitals from "./reportWebVitals";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
@@ -11,6 +10,7 @@ import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import Cart from "./components/Cart.js";
 
 const Instamart = lazy(() => import("./components/Instamart.js"));
 //upon ondemand loading => upon render =>suspend loading
@@ -56,6 +56,10 @@ const appRouter = createBrowserRouter([
             <Instamart />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

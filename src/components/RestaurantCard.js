@@ -20,6 +20,7 @@ const RestaurantCard = ({
       <h4>{areaName}</h4>
       <h4>{id}</h4>
       <h4 className="font-bold">{user.name}</h4>
+      <h4 className="font-bold">{user.email}</h4>
     </div>
   );
 };

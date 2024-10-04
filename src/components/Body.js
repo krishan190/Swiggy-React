@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import useOnline from "./../utils/useOnline";
+import userContext from "../utils/UserContext";
 
 // props : properties
 const Body = () => {
@@ -11,8 +12,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState(""); // To create local state variable
 
-  // empty dependency array => once after render
-  // dep array [searchText] => once after initial render + everytime after render (my searchText Chnages)
+  const { user, setUser } = useContext(userContext);
 
   useEffect(() => {
     getRestaurants();
@@ -67,6 +67,15 @@ const Body = () => {
         >
           Search
         </button>
+        <input
+          value={user.name}
+          onChange={(e) =>
+            setUser({
+              name: e.target.value,
+              email: "krish172@gmail.com",
+            })
+          }
+        ></input>
       </div>
       <div className="flex flex-wrap bg-cyan-100">
         {filteredRestaurants.map((restaurant) => {

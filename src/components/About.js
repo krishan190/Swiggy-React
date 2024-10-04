@@ -3,15 +3,8 @@ import { Component } from "react";
 import userContext from "./../utils/UserContext";
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    // console.log("Parent Constructor");
-  }
-
-  componentDidMount() {
-    // console.log("Parent ComponentDidMount");
-  }
-
+  
+  
   render() {
     // console.log("Parent render");
 
